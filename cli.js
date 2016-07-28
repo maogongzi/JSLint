@@ -63,7 +63,7 @@ if (configFilePath !== null) {
     if (configObj.ignore) {
         for (var i=0; i<configObj.ignore.length; i++) {
             // this file need to be ignored.
-            if (jsFilePath.minimatch(configObj.ignore[i])) {
+            if (minimatch(jsFilePath, configObj.ignore[i])) {
                 // console.log("This file has been ignored, check your
                 // .jslint.conf for more details.");
                 process.exit(0);
